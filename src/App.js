@@ -11,10 +11,10 @@ function App() {
 			<header></header>
 			<main>
 				<Routes>
-					<Route path='/' element={Dashboard}></Route>
-					<Route path='/login' element={Login}></Route>
-					<Route path='/bad-input' element={Bee_a_Difference_Input}></Route>
-					<Route path='/monthly-tracking-input' element={Monthly_Tracker_Input}></Route>
+					<Route path='/' element={<Dashboard/>}></Route>
+					<Route path='/login' element={<Login/>}></Route>
+					<Route path='/bad-input' element={<Bee_a_Difference_Input/>}></Route>
+					<Route path='/monthly-tracking-input' element={<Monthly_Tracker_Input/>}></Route>
 				</Routes>
 			</main>
 			<footer></footer>
