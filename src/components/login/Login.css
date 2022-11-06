@@ -1,0 +1,35 @@
+.login-container {
+    min-height: 90vh;
+    width: 100vw;
+}
+
+.body-content {
+    width: 100%;
+}
+
+.page-title {
+    color: red;
+    width: 70%;
+    text-align: center;
+}
+
+.credits-container{
+    width: 70%;
+}
+
+.credits {
+    color: red;
+}
+
+.mission-title {
+    margin-bottom: 5rem;
+}
+
+.vision-title {
+    margin-bottom: 3rem;
+}
+
+.user-and-pw-container {
+    margin-right: 10rem;
+    margin-left: -5rem;
+}
