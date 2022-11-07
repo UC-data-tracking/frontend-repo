@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100vw;
+    padding: 0% 2%;
+    color: rgb(77, 76, 76);
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1.3em;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    text-decoration: none;
+    color: red;
+}
+
+.logout-link {
+    color: red;
+}
