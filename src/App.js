@@ -11,8 +11,8 @@ function App() {
 			<header></header>
 			<main className='d-flex align-items-center justify-content-center'>
 				<Routes>
-					<Route path='/' element={<Dashboard/>}></Route>
-					<Route path='/login' element={<Login/>}></Route>
+					<Route path='/dashboard' element={<Dashboard/>}></Route>
+					<Route path='/' element={<Login/>}></Route>
 					<Route path='/bad-input' element={<Bee_a_Difference_Input/>}></Route>
 					<Route path='/monthly-tracking-input' element={<Monthly_Tracker_Input/>}></Route>
 				</Routes>

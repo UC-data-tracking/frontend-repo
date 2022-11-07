@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import Dashboard from '../dashboard/Dashboard';
 import './Login.css';
 
 function Login(props) {
@@ -17,7 +19,7 @@ function Login(props) {
 						<span className='fw-bold me-2'>Password</span>
 						<input type='text' />
 					</div>
-                    <button className='btn bg-light'>Submit</button>
+                    <Link to='/dashboard'><button className='btn bg-light'>Submit</button></Link>
 				</div>
 				<aside className='d-flex flex-column ms-5 fs-4'>
 					<span className='mission-title'>Mission</span>
