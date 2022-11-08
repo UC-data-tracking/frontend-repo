@@ -1,42 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Dashboard from '../dashboard/Dashboard';
 import './Login.css';
+import BeeImg from '../assets/bee-on-flower.avif';
 
 function Login(props) {
 	return (
-		<div className='login-container d-flex flex-column align-items-center justify-content-center'>
-			<h1 className='page-title fs-1 mb-5 p-3 border border-dark border-3'>
-				Ulyanna Chung State Farm Agency
-			</h1>
-			<div className='body-content d-flex flex-row justify-content-center mb-3'>
-				<div className='user-and-pw-container d-flex flex-column mt-5'>
-					<div className='d-flex mb-3 align-items-center'>
-						<span className='fw-bold me-2'>Username</span>
-						<input type='text' />
+		<div className='login-container container-fluid'>
+			<div className='row'>
+				<h1 className='trademark'>Track it</h1>
+				<div className='col d-flex justify-content-center'>
+					<div className='welcome-back-container flex-column d-flex justify-content-center gap-2'>
+						<h2>Welcome Back</h2>
+						<p>Let's get going! Please enter your login information below.</p>
+						<span>Email</span>
+						<input type='text' placeholder='Enter your email' />
+						<span>Password</span>
+						<input type='text' placeholder='Enter your password' />
+						<Link to='/forgot-password'>Forgot Password?</Link>
+						<butto className='btn'>Log in</butto>
+						<p>
+							Don't have an account? <Link to='/sign-up'>Sign up</Link>
+						</p>
 					</div>
-					<div className='d-flex flex-row align-items-center mb-3'>
-						<span className='fw-bold me-2'>Password</span>
-						<input type='text' />
-					</div>
-                    <Link to='/dashboard'><button className='btn bg-light'>Submit</button></Link>
 				</div>
-				<aside className='d-flex flex-column ms-5 fs-4'>
-					<span className='mission-title'>Mission</span>
-
-					<span className='vision-title'>Vision</span>
-				</aside>
-			</div>
-			<div className='credits-container d-flex flex-row'>
-				<p className='d-flex justify-content-start credits fs-5 border border-3 border-dark p-3'>
-					Bee a Difference v1.0 by:
-					<br />
-					Daniel
-					<br />
-					Eduardo
-					<br />
-					Julian
-				</p>
+				<div className='img-container col'>
+					<img
+						className='bee-on-flower-img'
+						src={BeeImg}
+						alt='Bee on a flower'
+					/>
+				</div>
 			</div>
 		</div>
 	);
