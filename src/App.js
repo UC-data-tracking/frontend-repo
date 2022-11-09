@@ -9,7 +9,7 @@ function App() {
   return (
 		<div>
 			<header></header>
-			<main className='d-flex align-items-center justify-content-center'>
+			<main>
 				<Routes>
 					<Route path='/dashboard' element={<Dashboard/>}></Route>
 					<Route path='/' element={<Login/>}></Route>
