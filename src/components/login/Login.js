@@ -14,7 +14,9 @@ function Login(props) {
 						<div className='mini-container'>
 							<div className='w-100 title-text-container d-flex flex-column gap-2'>
 								<h2 className='fs-1'>Welcome Back</h2>
-								<p className='get-started-text'>Please enter your login information below!</p>
+								<p className='get-started-text'>
+									Please enter your login information below!
+								</p>
 							</div>
 							<div className='flex-column d-flex justify-content-center gap-3 w-100 mb-3'>
 								<span>Email</span>
@@ -36,9 +38,12 @@ function Login(props) {
 								</Link>
 							</div>
 							<div className='w-100 d-flex flex-column justify-content-center gap-3'>
-								<button className='btn login-btn'>Login</button>
+								<Link to='/dashboard'><button className='btn login-btn w-100'>Login</button></Link>
 								<p className='no-acct-text text-center'>
-									Don't have an account? <Link to='/sign-up'>Sign up</Link>
+									Don't have an account?{' '}
+									<Link to='/sign-up' className='sign-up-text'>
+										Sign up
+									</Link>
 								</p>
 							</div>
 						</div>
