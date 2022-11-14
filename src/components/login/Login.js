@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Dashboard from '../dashboard/Dashboard';
 import './Login.css';
-import BeeImg from '../assets/bee-on-flower.avif';
 
 function Login(props) {
 	return (
@@ -52,7 +51,7 @@ function Login(props) {
 				<div className='img-container col d-flex align-items-center'>
 					<img
 						className='bee-on-flower-img'
-						src={BeeImg}
+						src={require('../assets/bee-on-flower.avif')}
 						alt='Bee on a flower'
 					/>
 				</div>

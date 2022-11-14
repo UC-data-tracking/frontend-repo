@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import BeeImg from '../assets/bee-on-flower.avif';
 
 function Sign_up(props) {
     return (
@@ -16,7 +15,19 @@ function Sign_up(props) {
 										Please enter your login information below!
 									</p>
 								</div>
-								<div className='flex-column d-flex justify-content-center gap-3 w-100 mb-3'>
+								<div className='flex-column d-flex justify-content-center gap-2 w-100 mb-3'>
+									<span>First Name</span>
+									<input
+										type='text'
+										placeholder='Enter your first name'
+										className='form-control'
+									/>
+									<span>Last Name</span>
+									<input
+										type='text'
+										placeholder='Enter your last name'
+										className='form-control'
+									/>
 									<span>Email</span>
 									<input
 										type='text'
@@ -52,7 +63,7 @@ function Sign_up(props) {
 					<div className='img-container col d-flex align-items-center'>
 						<img
 							className='bee-on-flower-img'
-							src={BeeImg}
+							src={require('../assets/bee-on-flower.avif')}
 							alt='Bee on a flower'
 						/>
 					</div>
