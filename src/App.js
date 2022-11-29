@@ -16,7 +16,7 @@ function App() {
 					<Route path='/' element={<Login/>}></Route>
 					<Route path='/sign-up' element={<Sign_up/>}></Route>
 					<Route path='/bad-input' element={<Bee_a_Difference_Input/>}></Route>
-					<Route path='/monthly-tracking-input' element={<Monthly_Tracker_Input/>}></Route>
+					<Route path='/monthly-tracker' element={<Monthly_Tracker_Input/>}></Route>
 				</Routes>
 			</main>
 			<footer></footer>

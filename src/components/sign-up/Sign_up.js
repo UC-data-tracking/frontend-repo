@@ -10,24 +10,12 @@ function Sign_up(props) {
 						<div className='welcome-back-container flex-column d-flex justify-content-center align-items-center'>
 							<div className='mini-container'>
 								<div className='w-100 title-text-container d-flex flex-column gap-2'>
-									<h2 className='fs-1'>Welcome Back</h2>
+									<h2 className='fs-2'>Sign up!</h2>
 									<p className='get-started-text'>
-										Please enter your login information below!
+										Please enter your information below!
 									</p>
 								</div>
 								<div className='flex-column d-flex justify-content-center gap-2 w-100 mb-3'>
-									<span>First Name</span>
-									<input
-										type='text'
-										placeholder='Enter your first name'
-										className='form-control'
-									/>
-									<span>Last Name</span>
-									<input
-										type='text'
-										placeholder='Enter your last name'
-										className='form-control'
-									/>
 									<span>Email</span>
 									<input
 										type='text'
@@ -36,24 +24,31 @@ function Sign_up(props) {
 									/>
 									<span>Password</span>
 									<input
-										type='text'
+										type='password'
 										placeholder='Enter your password'
 										className='form-control'
 									/>
-									<Link
-										to='/forgot-password'
-										className='forgot-password-text align-self-end'>
-										Forgot Password?
-									</Link>
+									<span>Confirm Password</span>
+									<input
+										type='password'
+										placeholder='Enter your password again'
+										className='form-control'
+									/>
+									<span>Agent Pin</span>
+									<input
+										type='text'
+										placeholder="Enter your agent's pin"
+										className='form-control'
+									/>
 								</div>
 								<div className='w-100 d-flex flex-column justify-content-center gap-3'>
 									<Link to='/dashboard'>
-										<button className='btn login-btn w-100'>Login</button>
+										<button className='btn login-btn w-100'>Sign up</button>
 									</Link>
 									<p className='no-acct-text text-center'>
-										Don't have an account?{' '}
-										<Link to='/sign-up' className='sign-up-text'>
-											Sign up
+										Already have an account?{' '}
+										<Link to='/' className='sign-up-text'>
+											Login
 										</Link>
 									</p>
 								</div>
