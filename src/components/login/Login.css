@@ -1,27 +1,16 @@
+.container-fluid {
+    height: 100vh ;
+}
+
 .trademark {
-    font-weight: 900;
-    margin-left: 3rem;
-    margin-top: 3rem;
-    margin-bottom: -5rem;
-}
-
-.img-container {
-    height: 100vh;
-    width: auto;
-}
-
-.bee-on-flower-img {
-    width: 95%;
-    max-height: 90%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1rem;
 }
 
 .login-container {
-    width: 95%;
-    max-height: 90%;
-}
-
-.mini-container {
-    width: 60%;
+    width: 40%;
 }
 
 .welcome-back-container {
