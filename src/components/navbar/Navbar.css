@@ -1,7 +1,9 @@
-.nav-logo {
-    color: black;
+nav ul ul {
+    display: none;
+    position: absolute;
 }
 
-.nav-link {
-    color: rgb(138, 138, 138);
+nav ul li:hover ul {
+    display: block;
+    background-color: white;
 }

@@ -7,10 +7,12 @@
     left: 0;
     top: 0;
     margin: 1rem;
+    font-weight: 600;
 }
 
 .login-container {
     width: 40%;
+    max-width: 500px;
 }
 
 .welcome-back-container {

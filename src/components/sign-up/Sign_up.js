@@ -5,7 +5,7 @@ function Sign_up(props) {
     return (
 		<div className='container-fluid d-flex justify-content-center align-items-center'>
 			<div className='w-100 d-flex flex-column justify-content-center align-items-center'>
-				<h1 className='trademark fs-4'>Track it</h1>
+				<h1 className='trademark fs-4'>Track It</h1>
 				<div className='login-container d-flex flex-column justify-content-center'>
 					<div className='welcome-back-container flex-column d-flex justify-content-center align-items-center'>
 						<div className='w-100 title-text-container d-flex flex-column gap-2'>
