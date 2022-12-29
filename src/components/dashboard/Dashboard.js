@@ -1,14 +1,15 @@
 import React from 'react';
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Calendar from 'react-calendar'
-
+import Time_Sheet_Input from '../time-sheet/Time_Sheet_Input';
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import '../dashboard/Dashboard.css'
 
 function Dashboard(props) {
-    const [date, setDate] = useState(new Date())
-
+    const [date, setDate] = useState(new Date());
+	const [show, setShowTime] = useState(false);
 
     return (
 			<div>
@@ -19,48 +20,63 @@ function Dashboard(props) {
 							onChange={setDate}
 							value={date}
 							showNeighboringMonth={false}
-                            onClickDay={null}
+							onClickDay={() => setShowTime(true)}
 						/>
 					</div>
 					<div className='text-center'>
 						Selected date: {date.toDateString()}
 					</div>
 				</div>
-                
-				<div
-					class='modal fade'
+
+				<Time_Sheet_Input onClose={()=> setShowTime(false)} title={date.toDateString()} show={show} date={date}/>
+
+				{/* <div
+					show={show}
+					onHide={handleClose}
+					className='modal fade'
 					id='exampleModalToggle'
 					aria-hidden='true'
 					aria-labelledby='exampleModalToggleLabel'
 					tabindex='-1'>
-					<div class='modal-dialog modal-dialog-centered'>
-						<div class='modal-content'>
-							<div class='modal-header'>
-								<h5 class='modal-title' id='exampleModalToggleLabel'>
-									Bee a Difference
+					<div className='modal-dialog modal-dialog-centered'>
+						<div className='modal-content'>
+							<div className='modal-header'>
+								<h5 className='modal-title' id='exampleModalToggleLabel'>
+									Time - {date.toDateString()}
 								</h5>
 								<button
+									onClick={handleClose}
 									type='button'
-									class='btn-close'
+									className='btn-close'
 									data-bs-dismiss='modal'
 									aria-label='Close'></button>
 							</div>
-							<div class='modal-body'>
-								Show a second modal and hide this one with the button below.
+							<div className='modal-body'>
+								<form className='d-flex justify-content-center align-items-center gap-3'>
+									<label htmlFor='hours-worked'>Hours worked</label>
+									<input
+										type='text'
+										id='hours-worked'
+										className='form-control hours-worked-input'
+									/>
+								</form>
 							</div>
-							<div class='modal-footer'>
+							<div className='modal-footer'>
+								<button className='btn btn-secondary'>Save</button>
 								<button
-									class='btn btn-primary'
+									className='btn btn-primary'
 									data-bs-target='#exampleModalToggle2'
 									data-bs-toggle='modal'
 									data-bs-dismiss='modal'>
-									Open second modal
+									Bee a difference &#8594;
 								</button>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div
+				</div> */}
+				{/* <div
+					show={show}
+					onHide={handleClose}
 					class='modal fade'
 					id='exampleModalToggle2'
 					aria-hidden='true'
@@ -70,37 +86,87 @@ function Dashboard(props) {
 						<div class='modal-content'>
 							<div class='modal-header'>
 								<h5 class='modal-title' id='exampleModalToggleLabel2'>
-									Modal 2
+									Bee a Difference - {date.toDateString()}
 								</h5>
 								<button
+									onClick={handleClose}
 									type='button'
 									class='btn-close'
 									data-bs-dismiss='modal'
 									aria-label='Close'></button>
 							</div>
 							<div class='modal-body'>
-								Hide this modal and show the first with the button below.
+								<form className='d-flex flex-column justify-content-center align-items-center gap-3'>
+									<div className='d-flex flex-row align-items-center gap-3'>
+										<label htmlFor='hours-worked'>Number of Pivots</label>
+										<input
+											type='text'
+											id='hours-worked'
+											className='form-control hours-worked-input'
+										/>
+									</div>
+									<div className='d-flex flex-row align-items-center gap-3'>
+										<label htmlFor='hours-worked'>
+											Number of Referral Asks
+										</label>
+										<input
+											type='text'
+											id='hours-worked'
+											className='form-control hours-worked-input'
+										/>
+									</div>
+									<div className='d-flex flex-row align-items-center gap-3'>
+										<label htmlFor='hours-worked'>Number of Review Asks</label>
+										<input
+											type='text'
+											id='hours-worked'
+											className='form-control hours-worked-input'
+										/>
+									</div>
+									<div className='d-flex flex-row align-items-center gap-3'>
+										<label htmlFor='hours-worked'>
+											Number of Appointments Conducted
+										</label>
+										<input
+											type='text'
+											id='hours-worked'
+											className='form-control hours-worked-input'
+										/>
+									</div>
+									<div className='d-flex flex-row align-items-center gap-3'>
+										<label htmlFor='hours-worked'>
+											Number of Marketing Calls
+										</label>
+										<input
+											type='text'
+											id='hours-worked'
+											className='form-control hours-worked-input'
+										/>
+									</div>
+								</form>
 							</div>
 							<div class='modal-footer'>
+								<button className='btn btn-secondary'>Save</button>
 								<button
 									class='btn btn-primary'
 									data-bs-target='#exampleModalToggle'
 									data-bs-toggle='modal'
 									data-bs-dismiss='modal'>
-									Back to first
+									Time &#8594;
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<a
 					class='btn btn-primary'
 					data-bs-toggle='modal'
 					href='#exampleModalToggle'
 					role='button'>
-					Open first modal
+					Open Time for Day Selected
 				</a>
-				<Footer />
+				<Footer /> */}
 			</div>
 		);
 }
